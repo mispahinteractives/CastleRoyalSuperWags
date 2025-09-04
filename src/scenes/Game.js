@@ -1,9 +1,6 @@
 import {
     Scene
 } from "phaser";
-import {
-    networkPlugin
-} from "../networkPlugin.js";
 import { EndCard } from "../objects/EndCard.js";
 import { GamePlay } from "../objects/game-play.js";
 import { Intro } from "../objects/intro.js";
