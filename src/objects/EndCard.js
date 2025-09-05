@@ -40,7 +40,7 @@ export class EndCard extends Phaser.GameObjects.Container {
 
     showCrackers() {
         this.crackerEvent = this.scene.time.addEvent({
-            delay: 350,
+            delay: 550,
             callback: this.addCracker,
             callbackScope: this,
             loop: true
@@ -55,20 +55,22 @@ export class EndCard extends Phaser.GameObjects.Container {
     }
 
     addCracker() {
+        const frames = ["Fireworks_1", "Fireworks_3"];
+
         let cracker = this.scene.add.sprite(
             Phaser.Math.Between(-300, 300),
             Phaser.Math.Between(-300, -300),
-            "Fireworks_" + Phaser.Math.Between(1, 3)
+            Phaser.Utils.Array.GetRandom(frames)
         );
         this.add(cracker);
-        this.bringToTop(this.banner);
+        this.bringToTop(this.logo);
 
         cracker.setScale(0);
         cracker.setAlpha(0);
 
         this.scene.tweens.add({
             targets: cracker,
-            scale: { from: 0, to: 1 },
+            scale: { from: 0, to: .85 },
             alpha: { from: 0, to: 1 },
             duration: 1000,
             ease: "Sine.Out",
@@ -89,14 +91,15 @@ export class EndCard extends Phaser.GameObjects.Container {
             let spark = this.scene.add.sprite(
                 cracker.x,
                 cracker.y,
-                "Fireworks_" + Phaser.Math.Between(1, 3)
+                Phaser.Utils.Array.GetRandom(frames)
             );
             this.add(spark);
             spark.setScale(0.3);
             spark.setAlpha(1);
+            this.bringToTop(this.logo);
 
             let angle = Phaser.Math.DegToRad(i * 60 + Phaser.Math.Between(-15, 15));
-            let distance = Phaser.Math.Between(100, 180);
+            let distance = Phaser.Math.Between(130, 130);
             let targetX = cracker.x + Math.cos(angle) * distance;
             let targetY = cracker.y + Math.sin(angle) * distance;
 
