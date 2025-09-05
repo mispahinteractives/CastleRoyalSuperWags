@@ -82,7 +82,7 @@
         <key>atfFormats</key>
         <string></string>
         <key>textureFormat</key>
-        <enum type="SettingsBase::TextureFormat">png</enum>
+        <enum type="SettingsBase::TextureFormat">png8</enum>
         <key>borderPadding</key>
         <uint>1</uint>
         <key>maxTextureSize</key>
@@ -182,19 +182,6 @@
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
             <key type="filename">../assets/Back_Card_.png</key>
-            <key type="filename">../assets/cards/Diamonds-10.png</key>
-            <key type="filename">../assets/cards/Diamonds-2.png</key>
-            <key type="filename">../assets/cards/Diamonds-3.png</key>
-            <key type="filename">../assets/cards/Diamonds-4.png</key>
-            <key type="filename">../assets/cards/Diamonds-5.png</key>
-            <key type="filename">../assets/cards/Diamonds-6.png</key>
-            <key type="filename">../assets/cards/Diamonds-7.png</key>
-            <key type="filename">../assets/cards/Diamonds-8.png</key>
-            <key type="filename">../assets/cards/Diamonds-9.png</key>
-            <key type="filename">../assets/cards/Diamonds-A.png</key>
-            <key type="filename">../assets/cards/Diamonds-J.png</key>
-            <key type="filename">../assets/cards/Diamonds-K.png</key>
-            <key type="filename">../assets/cards/Diamonds-Q.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>

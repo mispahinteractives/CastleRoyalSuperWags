@@ -57,6 +57,7 @@ export class GamePlay extends Phaser.GameObjects.Container {
             callback: () => {
                 this.canClick = true;
                 this.showHint();
+                // this.showWin();
             }
         })
     }
@@ -108,7 +109,7 @@ export class GamePlay extends Phaser.GameObjects.Container {
             newCard.x = card.x;
             newCard.y = card.y;
             newCard.setScale(this.cardScale);
-            newCard.data = { front: "cards/" + card.front, back: card.back, x: card.x, y: card.y, angle: card.angle, isFlipped: card.isFlipped };
+            newCard.data = { front: card.front, back: card.back, x: card.x, y: card.y, angle: card.angle, isFlipped: card.isFlipped };
             this.add(newCard);
             this.targetCards.push(newCard);
 
@@ -133,7 +134,7 @@ export class GamePlay extends Phaser.GameObjects.Container {
             newCard.x = card.x;
             newCard.y = card.y;
             newCard.setScale(this.cardScale);
-            newCard.data = { front: "cards/" + card.front, back: card.back, x: card.x, y: card.y, angle: card.angle, isFlipped: card.isFlipped };
+            newCard.data = { front: card.front, back: card.back, x: card.x, y: card.y, angle: card.angle, isFlipped: card.isFlipped };
             this.add(newCard);
             this.bottomCards.push(newCard);
 
@@ -171,7 +172,7 @@ export class GamePlay extends Phaser.GameObjects.Container {
             newCard.y = card.y;
             newCard.setScale(this.cardScale);
             newCard.angle = card.angle;
-            newCard.data = { front: "cards/" + card.front, back: card.back, x: card.x, y: card.y, angle: card.angle, isFlipped: card.isFlipped, isBolt: card.isBolt };
+            newCard.data = { front: card.front, back: card.back, x: card.x, y: card.y, angle: card.angle, isFlipped: card.isFlipped, isBolt: card.isBolt };
             this.add(newCard);
             this.topCards.push(newCard);
 
@@ -215,8 +216,11 @@ export class GamePlay extends Phaser.GameObjects.Container {
         this.stopHint();
         this.scene.sound.play('click', { volume: 1.5 })
         const expected = this.cardPlayOrder[this.currentIndex + 1];
-        if ("cards/" + expected === sprite.data.front && !sprite.placed) {
+        if (expected === sprite.data.front && !sprite.placed) {
             sprite.disableInteractive();
+            this.bringToTop(sprite);
+            sprite.placed = true;
+
             if (sprite.data.isBolt) {
                 sprite.bolt.visible = false;
                 this.scene.addCard(sprite)
@@ -230,11 +234,11 @@ export class GamePlay extends Phaser.GameObjects.Container {
                     this.scene.sound.play('positive1', { volume: 1 });
                 }
             }
-            this.bringToTop(sprite);
-            sprite.placed = true;
-
             const target = this.targetCards[this.targetCards.length - 1];
             this.moveCardWithArc(sprite, target.x, target.y);
+
+            this.targetCards.push(sprite);
+            this.topCards = this.topCards.filter(card => card !== sprite);
 
             this.currentIndex++;
 
@@ -242,7 +246,7 @@ export class GamePlay extends Phaser.GameObjects.Container {
             const deps = this.cardDependencies[cardName];
             if (deps) {
                 deps.forEach(dep => {
-                    const card = this.topCards.find(c => c.data.front === "cards/" + dep);
+                    const card = this.topCards.find(c => c.data.front === dep);
                     if (card && !card.data.isFlipped) {
                         this.flipCard(card);
                     }
@@ -336,19 +340,35 @@ export class GamePlay extends Phaser.GameObjects.Container {
     showWin() {
         this.gameOver = true;
         this.canClick = false;
+
         this.scene.time.addEvent({
             delay: 900,
             callback: () => {
                 this.superWag.visible = true;
                 this.superWag.setAngle(-30);
                 this.scene.bar.hide();
-                this.superWag.fx.play("fx")
+                this.superWag.fx.play("fx");
+
+                const allCards = [...this.topCards, ...this.bottomCards, ...this.targetCards];
+                allCards.forEach((card, i) => {
+                    this.scene.tweens.add({
+                        targets: card,
+                        x: card.x + Phaser.Math.Between(250, 500),
+                        y: card.y + Phaser.Math.Between(-200, 200),
+                        angle: Phaser.Math.Between(-90, 90),
+                        alpha: 0,
+                        duration: Phaser.Math.Between(700, 1200),
+                        ease: "Cubic.Out",
+                        delay: i * 20
+                    });
+                });
+
                 this.scene.tweens.add({
                     targets: this.superWag,
                     x: 500,
                     scale: { from: .5, to: this.superWag.scaleX },
                     angle: 0,
-                    duration: 3000,
+                    duration: 2500,
                     ease: 'Cubic.Out',
                     onComplete: () => {
                         this.superWag.visible = false;
@@ -361,18 +381,18 @@ export class GamePlay extends Phaser.GameObjects.Container {
                         this.hide();
                         this.scene.endCard.show();
                     }
-                })
+                });
             }
-        })
+        });
     }
 
     showHint() {
         if (this.gameOver) return;
         const expected = this.cardPlayOrder[this.currentIndex + 1];
         if (!expected) return;
-        let card = this.topCards.find(c => c.data.front === "cards/" + expected && c.data.isFlipped && !c.placed);
+        let card = this.topCards.find(c => c.data.front === expected && c.data.isFlipped && !c.placed);
         if (!card) {
-            card = this.bottomCards.find(c => c.data.front === "cards/" + expected && c.data.isFlipped && !c.placed);
+            card = this.bottomCards.find(c => c.data.front === expected && c.data.isFlipped && !c.placed);
         }
         if (card) {
             this.add(this.handSprite);

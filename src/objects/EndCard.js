@@ -14,7 +14,7 @@ export class EndCard extends Phaser.GameObjects.Container {
     }
 
     init() {
-        this.logo = this.scene.add.sprite(0, -200, 'sheet', 'Solitaire-CR_Logo').setOrigin(.5).setScale(1);
+        this.logo = this.scene.add.sprite(0, -200, 'sheet', 'Solitaire-CR_Logo').setOrigin(.5).setScale(1.3);
         this.add(this.logo);
 
         this.ray = this.scene.add.sprite(0, 170, 'sheet', 'VFX_God-Rays').setOrigin(.5).setScale(1);
@@ -46,18 +46,71 @@ export class EndCard extends Phaser.GameObjects.Container {
     }
 
     addCracker() {
-        let cracker = this.scene.add.sprite(Phaser.Math.Between(-300, 100), Phaser.Math.Between(-400, -100), "Fireworks_" + Phaser.Math.Between(1, 3))
+        let cracker = this.scene.add.sprite(
+            Phaser.Math.Between(-300, 300),
+            Phaser.Math.Between(-300, -300),
+            "Fireworks_" + Phaser.Math.Between(1, 3)
+        );
         this.add(cracker);
         this.bringToTop(this.banner);
-        this.scene.add.tween({
+
+        cracker.setScale(0);
+        cracker.setAlpha(0);
+
+        this.scene.tweens.add({
             targets: cracker,
-            scale: { from: 0, to: .8 },
+            scale: { from: 0, to: 1 },
+            alpha: { from: 0, to: 1 },
             duration: 1000,
-            ease: 'Linear',
+            ease: "Sine.Out",
             onComplete: () => {
-                cracker.destroy();
+                this.scene.tweens.add({
+                    targets: cracker,
+                    alpha: 0,
+                    duration: 100,
+                    ease: "Linear",
+                    onComplete: () => {
+                        cracker.destroy();
+                    }
+                });
             }
-        })
+        });
+
+        for (let i = 0; i < 6; i++) {
+            let spark = this.scene.add.sprite(
+                cracker.x,
+                cracker.y,
+                "Fireworks_" + Phaser.Math.Between(1, 3)
+            );
+            this.add(spark);
+            spark.setScale(0.3);
+            spark.setAlpha(1);
+
+            let angle = Phaser.Math.DegToRad(i * 60 + Phaser.Math.Between(-15, 15));
+            let distance = Phaser.Math.Between(100, 180);
+            let targetX = cracker.x + Math.cos(angle) * distance;
+            let targetY = cracker.y + Math.sin(angle) * distance;
+
+            this.scene.tweens.add({
+                targets: spark,
+                x: targetX,
+                y: targetY,
+                scale: 0,
+                duration: Phaser.Math.Between(1000, 1400),
+                ease: "Sine.Out",
+                onComplete: () => {
+                    this.scene.tweens.add({
+                        targets: spark,
+                        alpha: 0,
+                        duration: 100,
+                        ease: "Linear",
+                        onComplete: () => {
+                            spark.destroy();
+                        }
+                    });
+                }
+            });
+        }
     }
 
     onClick(sprite) {

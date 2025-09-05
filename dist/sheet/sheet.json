@@ -2,7 +2,7 @@
 
 {
 	"filename": "Back_Card_",
-	"frame": {"x":1834,"y":464,"w":74,"h":113},
+	"frame": {"x":1138,"y":227,"w":74,"h":113},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":74,"h":113},
@@ -10,7 +10,7 @@
 },
 {
 	"filename": "Blue_Circle",
-	"frame": {"x":435,"y":878,"w":360,"h":360},
+	"frame": {"x":685,"y":845,"w":360,"h":360},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":360,"h":360},
@@ -26,7 +26,7 @@
 },
 {
 	"filename": "Bolt Icon",
-	"frame": {"x":1221,"y":299,"w":42,"h":62},
+	"frame": {"x":1936,"y":484,"w":42,"h":62},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":62},
@@ -34,7 +34,7 @@
 },
 {
 	"filename": "Cape",
-	"frame": {"x":1645,"y":127,"w":240,"h":197},
+	"frame": {"x":423,"y":878,"w":240,"h":197},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":0,"y":147,"w":240,"h":197},
@@ -42,119 +42,15 @@
 },
 {
 	"filename": "Card_Outer-glow",
-	"frame": {"x":1748,"y":769,"w":80,"h":111},
+	"frame": {"x":1862,"y":220,"w":80,"h":111},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":111},
 	"sourceSize": {"w":80,"h":111}
 },
 {
-	"filename": "cards/Diamonds-2",
-	"frame": {"x":1748,"y":883,"w":74,"h":113},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":74,"h":113},
-	"sourceSize": {"w":74,"h":113}
-},
-{
-	"filename": "cards/Diamonds-3",
-	"frame": {"x":1839,"y":696,"w":74,"h":113},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":74,"h":113},
-	"sourceSize": {"w":74,"h":113}
-},
-{
-	"filename": "cards/Diamonds-4",
-	"frame": {"x":1756,"y":999,"w":74,"h":113},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":74,"h":113},
-	"sourceSize": {"w":74,"h":113}
-},
-{
-	"filename": "cards/Diamonds-5",
-	"frame": {"x":1833,"y":971,"w":74,"h":113},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":74,"h":113},
-	"sourceSize": {"w":74,"h":113}
-},
-{
-	"filename": "cards/Diamonds-6",
-	"frame": {"x":1910,"y":971,"w":74,"h":113},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":74,"h":113},
-	"sourceSize": {"w":74,"h":113}
-},
-{
-	"filename": "cards/Diamonds-7",
-	"frame": {"x":1713,"y":1115,"w":74,"h":113},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":74,"h":113},
-	"sourceSize": {"w":74,"h":113}
-},
-{
-	"filename": "cards/Diamonds-8",
-	"frame": {"x":1790,"y":1115,"w":74,"h":113},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":74,"h":113},
-	"sourceSize": {"w":74,"h":113}
-},
-{
-	"filename": "cards/Diamonds-9",
-	"frame": {"x":1867,"y":1087,"w":74,"h":113},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":74,"h":113},
-	"sourceSize": {"w":74,"h":113}
-},
-{
-	"filename": "cards/Diamonds-10",
-	"frame": {"x":1839,"y":580,"w":74,"h":113},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":74,"h":113},
-	"sourceSize": {"w":74,"h":113}
-},
-{
-	"filename": "cards/Diamonds-A",
-	"frame": {"x":1882,"y":327,"w":74,"h":113},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":74,"h":113},
-	"sourceSize": {"w":74,"h":113}
-},
-{
-	"filename": "cards/Diamonds-J",
-	"frame": {"x":1911,"y":443,"w":74,"h":113},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":74,"h":113},
-	"sourceSize": {"w":74,"h":113}
-},
-{
-	"filename": "cards/Diamonds-K",
-	"frame": {"x":1916,"y":559,"w":74,"h":113},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":74,"h":113},
-	"sourceSize": {"w":74,"h":113}
-},
-{
-	"filename": "cards/Diamonds-Q",
-	"frame": {"x":1916,"y":675,"w":74,"h":113},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":74,"h":113},
-	"sourceSize": {"w":74,"h":113}
-},
-{
 	"filename": "Collect-C",
-	"frame": {"x":1158,"y":306,"w":60,"h":75},
+	"frame": {"x":1785,"y":561,"w":60,"h":75},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":75},
@@ -162,7 +58,7 @@
 },
 {
 	"filename": "Collect-E",
-	"frame": {"x":1944,"y":1087,"w":55,"h":76},
+	"frame": {"x":1959,"y":643,"w":55,"h":76},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":55,"h":76},
@@ -170,7 +66,7 @@
 },
 {
 	"filename": "Collect-L",
-	"frame": {"x":1158,"y":227,"w":53,"h":76},
+	"frame": {"x":1950,"y":378,"w":53,"h":76},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":76},
@@ -178,7 +74,7 @@
 },
 {
 	"filename": "Collect-O",
-	"frame": {"x":1422,"y":1162,"w":70,"h":76},
+	"frame": {"x":1945,"y":220,"w":70,"h":76},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":70,"h":76},
@@ -186,7 +82,7 @@
 },
 {
 	"filename": "Collect-T",
-	"frame": {"x":1946,"y":1166,"w":59,"h":75},
+	"frame": {"x":1138,"y":343,"w":59,"h":75},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":59,"h":75},
@@ -194,7 +90,7 @@
 },
 {
 	"filename": "Download-Now",
-	"frame": {"x":1571,"y":327,"w":308,"h":134},
+	"frame": {"x":1271,"y":697,"w":308,"h":134},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":308,"h":134},
@@ -202,7 +98,7 @@
 },
 {
 	"filename": "electric effect",
-	"frame": {"x":1888,"y":89,"w":109,"h":140},
+	"frame": {"x":1862,"y":77,"w":109,"h":140},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":109,"h":140},
@@ -210,7 +106,7 @@
 },
 {
 	"filename": "favicon",
-	"frame": {"x":1001,"y":240,"w":154,"h":154},
+	"frame": {"x":1822,"y":941,"w":154,"h":154},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":154},
@@ -218,7 +114,7 @@
 },
 {
 	"filename": "fx/01",
-	"frame": {"x":1556,"y":811,"w":189,"h":196},
+	"frame": {"x":1630,"y":986,"w":189,"h":196},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":189,"h":196},
@@ -226,7 +122,7 @@
 },
 {
 	"filename": "fx/02",
-	"frame": {"x":1224,"y":127,"w":418,"h":169},
+	"frame": {"x":2,"y":950,"w":418,"h":169},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":418,"h":169},
@@ -250,7 +146,7 @@
 },
 {
 	"filename": "fx/05",
-	"frame": {"x":798,"y":1185,"w":402,"h":63},
+	"frame": {"x":2,"y":1122,"w":402,"h":63},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":402,"h":63},
@@ -258,7 +154,7 @@
 },
 {
 	"filename": "fx/06",
-	"frame": {"x":1867,"y":1203,"w":76,"h":31},
+	"frame": {"x":1657,"y":352,"w":76,"h":31},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":31},
@@ -266,7 +162,7 @@
 },
 {
 	"filename": "Hand",
-	"frame": {"x":1702,"y":601,"w":134,"h":165},
+	"frame": {"x":1001,"y":240,"w":134,"h":165},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":9,"y":7,"w":134,"h":165},
@@ -274,7 +170,7 @@
 },
 {
 	"filename": "info",
-	"frame": {"x":1271,"y":572,"w":240,"h":240},
+	"frame": {"x":1387,"y":834,"w":240,"h":240},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":240},
@@ -290,7 +186,7 @@
 },
 {
 	"filename": "intro/Text_and",
-	"frame": {"x":1831,"y":812,"w":148,"h":74},
+	"frame": {"x":1785,"y":484,"w":148,"h":74},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":1,"y":1,"w":148,"h":74},
@@ -298,7 +194,7 @@
 },
 {
 	"filename": "intro/Text_level!",
-	"frame": {"x":1203,"y":1165,"w":216,"h":80},
+	"frame": {"x":423,"y":1078,"w":216,"h":80},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":0,"y":1,"w":216,"h":80},
@@ -306,7 +202,7 @@
 },
 {
 	"filename": "intro/Text_the",
-	"frame": {"x":1825,"y":889,"w":143,"h":79},
+	"frame": {"x":1848,"y":561,"w":143,"h":79},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":0,"y":1,"w":143,"h":79},
@@ -314,7 +210,7 @@
 },
 {
 	"filename": "intro/Text_wags",
-	"frame": {"x":1556,"y":1010,"w":197,"h":75},
+	"frame": {"x":1818,"y":863,"w":197,"h":75},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":1,"y":1,"w":197,"h":75},
@@ -322,7 +218,7 @@
 },
 {
 	"filename": "intro/Text_Will",
-	"frame": {"x":1543,"y":1088,"w":167,"h":72},
+	"frame": {"x":1820,"y":2,"w":167,"h":72},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":1,"y":2,"w":167,"h":72},
@@ -330,7 +226,7 @@
 },
 {
 	"filename": "intro/Text_ZAP_",
-	"frame": {"x":1495,"y":1163,"w":154,"h":79},
+	"frame": {"x":1822,"y":1098,"w":154,"h":79},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":1,"y":1,"w":154,"h":79},
@@ -346,7 +242,7 @@
 },
 {
 	"filename": "Mask",
-	"frame": {"x":1820,"y":2,"w":197,"h":84},
+	"frame": {"x":1818,"y":776,"w":197,"h":84},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":197,"h":84},
@@ -354,7 +250,7 @@
 },
 {
 	"filename": "Particle-Dot",
-	"frame": {"x":1959,"y":309,"w":53,"h":53},
+	"frame": {"x":1845,"y":720,"w":53,"h":53},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":1,"y":1,"w":53,"h":53},
@@ -362,7 +258,7 @@
 },
 {
 	"filename": "Prograss-Bar-BG",
-	"frame": {"x":1137,"y":845,"w":202,"h":222},
+	"frame": {"x":1657,"y":127,"w":202,"h":222},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":202,"h":222},
@@ -370,7 +266,7 @@
 },
 {
 	"filename": "Prograss-Bar-Fill_01",
-	"frame": {"x":1888,"y":232,"w":111,"h":74},
+	"frame": {"x":1845,"y":643,"w":111,"h":74},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":111,"h":74},
@@ -378,7 +274,7 @@
 },
 {
 	"filename": "Prograss-Bar-Fill_02",
-	"frame": {"x":1378,"y":1030,"w":162,"h":129},
+	"frame": {"x":1785,"y":352,"w":162,"h":129},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":162,"h":129},
@@ -386,7 +282,7 @@
 },
 {
 	"filename": "Prograss-Bar-Fill_03",
-	"frame": {"x":1514,"y":601,"w":185,"h":207},
+	"frame": {"x":1630,"y":776,"w":185,"h":207},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":185,"h":207},
@@ -394,7 +290,7 @@
 },
 {
 	"filename": "Solitaire-CR_Logo",
-	"frame": {"x":1571,"y":464,"w":260,"h":134},
+	"frame": {"x":1582,"y":639,"w":260,"h":134},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":260,"h":134},
@@ -410,7 +306,7 @@
 },
 {
 	"filename": "Super-Chest",
-	"frame": {"x":1271,"y":299,"w":297,"h":270},
+	"frame": {"x":1271,"y":424,"w":297,"h":270},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":0,"y":0,"w":297,"h":270},
@@ -418,7 +314,7 @@
 },
 {
 	"filename": "Super-wags",
-	"frame": {"x":2,"y":950,"w":430,"h":294},
+	"frame": {"x":1224,"y":127,"w":430,"h":294},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":6,"y":1,"w":430,"h":294},
@@ -426,7 +322,7 @@
 },
 {
 	"filename": "Talon-Base",
-	"frame": {"x":1137,"y":1070,"w":238,"h":92},
+	"frame": {"x":1387,"y":1077,"w":238,"h":92},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":238,"h":92},
@@ -434,7 +330,7 @@
 },
 {
 	"filename": "Text_3",
-	"frame": {"x":1652,"y":1163,"w":58,"h":76},
+	"frame": {"x":1950,"y":299,"w":58,"h":76},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":58,"h":76},
@@ -458,7 +354,7 @@
 },
 {
 	"filename": "VFX_Ring",
-	"frame": {"x":798,"y":845,"w":336,"h":337},
+	"frame": {"x":1048,"y":845,"w":336,"h":337},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":336,"h":337},
@@ -490,7 +386,7 @@
 },
 {
 	"filename": "wave_1",
-	"frame": {"x":1342,"y":815,"w":211,"h":212},
+	"frame": {"x":1571,"y":424,"w":211,"h":212},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":211,"h":212},
@@ -501,8 +397,8 @@
 	"version": "1.0",
 	"image": "sheet.png",
 	"format": "RGBA8888",
-	"size": {"w":2019,"h":1250},
+	"size": {"w":2017,"h":1207},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:5c12701d8e0e151e0b961c182fa46d96:7cfe0db8cde3515722120d61e4863293:9c44ecd7e9a522007eaff2949095bc1d$"
+	"smartupdate": "$TexturePacker:SmartUpdate:ed050954678e7ca72e18f10f89e5d471:8b80265fea3e2c1b16208c22ae43969e:9c44ecd7e9a522007eaff2949095bc1d$"
 }
 }

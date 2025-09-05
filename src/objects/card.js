@@ -11,7 +11,7 @@ export class Card extends Phaser.GameObjects.Container {
 
     init() {
 
-        this.card = this.scene.add.sprite(0, 0, 'sheet', 'Back_Card_').setOrigin(.5);
+        this.card = this.scene.add.sprite(0, 0, 'card', 'Back_Card_').setOrigin(.5);
         this.add(this.card);
 
         this.bolt = this.scene.add.sprite(24, -35, 'sheet', 'Bolt Icon').setOrigin(.5).setScale(.5)
