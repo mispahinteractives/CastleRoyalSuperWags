@@ -26,6 +26,15 @@ export class EndCard extends Phaser.GameObjects.Container {
         this.chest = this.scene.add.sprite(0, 170, 'sheet', 'Super-Chest').setOrigin(.5).setScale(.65);
         this.add(this.chest);
 
+        this.handSprite = this.scene.add.sprite(0, 170, "sheet", 'Hand');
+        this.handSprite.setScale(.8);
+        this.handSprite.setOrigin(0, 0);
+        this.add(this.handSprite);
+        this.handSprite.visible = false;
+
+        this.handTween = this.scene.add.tween({ targets: this.handSprite, scale: { from: this.handSprite.scaleX, to: this.handSprite.scaleX + .1 }, duration: 500, ease: "Linear", repeat: -1, yoyo: true, });
+
+
         this.visible = false;
     }
 
@@ -155,6 +164,12 @@ export class EndCard extends Phaser.GameObjects.Container {
 
         setTimeout(() => {
             this.showCrackers();
+            this.scene.time.addEvent({
+                delay: 2000,
+                callback: () => {
+                    this.handSprite.visible = true;
+                },
+            });
         }, delay);
     }
 
