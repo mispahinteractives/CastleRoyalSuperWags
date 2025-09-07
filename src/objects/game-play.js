@@ -76,6 +76,7 @@ export class GamePlay extends Phaser.GameObjects.Container {
 
     init() {
         this.cardScale = .912;
+        this.hintTimer = 3000;
 
         this.cardPlayOrder = ['Diamonds-A', "Diamonds-2", "Diamonds-3", 'Diamonds-4', 'Diamonds-5', 'Diamonds-6', 'Diamonds-7', 'Diamonds-8',
             'Diamonds-9', 'Diamonds-10', 'Diamonds-J', 'Diamonds-Q', 'Diamonds-K'
@@ -204,8 +205,6 @@ export class GamePlay extends Phaser.GameObjects.Container {
         this.add(this.handSprite);
         this.handSprite.visible = false;
 
-        this.handTween = this.scene.add.tween({ targets: this.handSprite, scale: { from: this.handSprite.scaleX, to: this.handSprite.scaleX + .1 }, duration: 500, ease: "Linear", repeat: -1, yoyo: true, });
-
         this.visible = false;
     }
 
@@ -253,25 +252,8 @@ export class GamePlay extends Phaser.GameObjects.Container {
                 });
             }
         } else {
-            this.shakeSprite(sprite);
+            sprite.shakeSprite();
         }
-    }
-
-    shakeSprite(sprite) {
-        this.canClick = false;
-        this.scene.tweens.add({
-            targets: sprite,
-            x: sprite.x + 10,
-            angle: sprite.angle + 10,
-            duration: 100,
-            ease: 'Sine.easeInOut',
-            yoyo: true,
-            repeat: 1,
-            onComplete: () => {
-                this.canClick = true;
-                this.showHint();
-            }
-        });
     }
 
     flipCard(card) {
@@ -331,7 +313,7 @@ export class GamePlay extends Phaser.GameObjects.Container {
                 sprite.x = targetX;
                 sprite.y = targetY;
                 sprite.angle = 0;
-                this.showHint();
+                // this.startHint();
                 if (onComplete) onComplete();
             }
         });
@@ -386,26 +368,53 @@ export class GamePlay extends Phaser.GameObjects.Container {
         });
     }
 
+    startHint() {
+        if (this.hintDelay) this.scene.time.removeEvent(this.hintDelay);
+        this.hintDelay = this.scene.time.addEvent({
+            delay: this.hintTimer,
+            callback: () => {
+                this.showHint();
+            }
+        })
+    }
+
     showHint() {
         if (this.gameOver) return;
+
         const expected = this.cardPlayOrder[this.currentIndex + 1];
         if (!expected) return;
+
         let card = this.topCards.find(c => c.data.front === expected && c.data.isFlipped && !c.placed);
         if (!card) {
             card = this.bottomCards.find(c => c.data.front === expected && c.data.isFlipped && !c.placed);
         }
+
         if (card) {
             this.add(this.handSprite);
             this.handSprite.x = card.x;
             this.handSprite.y = card.y;
             this.handSprite.visible = true;
             this.bringToTop(this.handSprite);
+
+            this.handTween = this.scene.tweens.add({
+                targets: this.handSprite,
+                scale: { from: this.handSprite.scaleX, to: this.handSprite.scaleX - 0.1 },
+                duration: 600,
+                ease: "Sine.easeInOut",
+                yoyo: true,
+                repeat: 1,
+                onComplete: () => {
+                    this.stopHint();
+                }
+            });
         }
     }
 
     stopHint() {
         this.handSprite.visible = false;
         this.handSprite.setScale(1);
+
+        if (this.handTween) this.handTween.stop();
     }
 
     adjust() {

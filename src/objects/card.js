@@ -20,4 +20,21 @@ export class Card extends Phaser.GameObjects.Container {
 
     }
 
+    shakeSprite() {
+        let prevAngle = this.angle;
+        this.scene.tweens.add({
+            targets: this,
+            angle: this.angle - 10,
+            duration: 80,
+            ease: 'Sine.easeInOut',
+            yoyo: true,
+            repeat: 2,
+            onComplete: () => {
+                this.setAngle(prevAngle);
+                this.parentContainer.canClick = true;
+                this.parentContainer.startHint();
+            }
+        });
+    }
+
 }

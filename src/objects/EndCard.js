@@ -14,6 +14,8 @@ export class EndCard extends Phaser.GameObjects.Container {
     }
 
     init() {
+        this.crackerIndex = 0;
+
         this.logo = this.scene.add.sprite(0, -200, 'sheet', 'Solitaire-CR_Logo').setOrigin(.5).setScale(1.3);
         this.add(this.logo);
 
@@ -25,6 +27,11 @@ export class EndCard extends Phaser.GameObjects.Container {
 
         this.chest = this.scene.add.sprite(0, 170, 'sheet', 'Super-Chest').setOrigin(.5).setScale(.65);
         this.add(this.chest);
+
+        this.chest.setInteractive();
+        this.chest.on("pointerdown", (event) => {
+            this.onClick(this.chest);
+        })
 
         this.handSprite = this.scene.add.sprite(0, 170, "sheet", 'Hand');
         this.handSprite.setScale(.8);
@@ -57,9 +64,15 @@ export class EndCard extends Phaser.GameObjects.Container {
     addCracker() {
         const frames = ["Fireworks_1", "Fireworks_3"];
 
+        let xPos = [-250, -150, -50, 50, 150, 250];
+        let yPos = [-200, -350, -300, -400, -300, -200];
+
+        let index = this.crackerIndex % xPos.length;
+        this.crackerIndex++;
+
         let cracker = this.scene.add.sprite(
-            Phaser.Math.Between(-300, 300),
-            Phaser.Math.Between(-300, -300),
+            xPos[index],
+            yPos[index],
             Phaser.Utils.Array.GetRandom(frames)
         );
         this.add(cracker);
@@ -87,6 +100,7 @@ export class EndCard extends Phaser.GameObjects.Container {
             }
         });
 
+        // sparks logic 그대로
         for (let i = 0; i < 6; i++) {
             let spark = this.scene.add.sprite(
                 cracker.x,
@@ -152,7 +166,7 @@ export class EndCard extends Phaser.GameObjects.Container {
             ease: "Back.easeOut",
             delay: delay,
             onComplete: () => {
-                this.scene.tweens.add({ targets: this.text, scale: this.text.scaleX - .05, duration: 250, ease: "Linear", delay: 1000, repeat: -1, yoyo: true });
+                this.shakeTextSequence();
             }
         });
 
@@ -174,6 +188,25 @@ export class EndCard extends Phaser.GameObjects.Container {
                 },
             });
         }, delay);
+    }
+
+    shakeTextSequence() {
+        const doShake = () => {
+            this.scene.tweens.add({
+                targets: this.text,
+                x: this.text.x - 10,
+                duration: 50,
+                yoyo: true,
+                repeat: 2,
+                onComplete: () => {
+                    this.scene.time.delayedCall(2000, () => {
+                        doShake();
+                    });
+                }
+            });
+        };
+
+        doShake();
     }
 
     adjust() {
