@@ -36,8 +36,21 @@ export class Game extends Scene {
         this.gameGroup.add(this.bg);
 
         this.gamePlay = new GamePlay(this, 0, 0);
-        this.intro = new Intro(this, 0, 0);
         this.bar = new Bar(this, 0, 0);
+        this.intro = new Intro(this, 0, 0);
+
+        this.blueGraphicsGrp = this.add.container();
+
+        this.blueGraphics = this.make.graphics().fillStyle(0x000000, 1).fillRect(dimensions.leftOffset, dimensions.topOffset, dimensions.actualWidth, dimensions.actualHeight);
+        this.blueGraphicsGrp.add(this.blueGraphics);
+
+        this.whiteGraphicsGrp = this.add.container();
+
+        this.whiteGraphics = this.make.graphics().fillStyle(0x000000, 1).fillRect(dimensions.leftOffset, dimensions.topOffset, dimensions.actualWidth, dimensions.actualHeight);
+        this.whiteGraphicsGrp.add(this.whiteGraphics);
+
+        this.whiteGraphicsGrp.alpha = 0;
+        this.blueGraphicsGrp.alpha = 0;
 
         this.endCard = new EndCard(this, 0, 0);
 
@@ -45,10 +58,13 @@ export class Game extends Scene {
         this.logo.setScale(1)
 
         this.gameGroup.add(this.gamePlay);
+        this.gameGroup.add(this.bar);
         this.gameGroup.add(this.intro);
         this.gameGroup.add(this.endCard);
+        this.gameGroup.add(this.blueGraphicsGrp);
+        this.gameGroup.add(this.whiteGraphicsGrp);
+
         this.gameGroup.add(this.logo);
-        this.gameGroup.add(this.bar);
 
         window.addEventListener('resize', function(event) {
             this.resizeGame();
@@ -58,14 +74,49 @@ export class Game extends Scene {
 
         setTimeout(() => {
             showGameScreen();
-            // this.bar.show();
+            this.bar.show();
             // this.bar.moveBarToTop();
-            this.intro.show();
             // this.endCard.show();
         }, 400);
 
         this.firstTouchDetected = false;
         this.firstTouch();
+    }
+
+    addWinGraphics() {
+
+        this.tweens.add({
+            targets: this.whiteGraphicsGrp,
+            alpha: 1,
+            duration: 200,
+            ease: 'Linear',
+            onComplete: () => {
+                this.tweens.add({
+                    targets: [this.whiteGraphicsGrp, this.blueGraphicsGrp],
+                    alpha: 0,
+                    duration: 200,
+                    ease: 'Linear',
+                    delay: 300,
+                });
+            }
+        });
+
+        this.time.addEvent({
+            delay: 100,
+            callback: () => {
+                this.gameGroup.bringToTop(this.whiteGraphicsGrp);
+                this.gameGroup.bringToTop(this.blueGraphicsGrp);
+                this.gameGroup.bringToTop(this.logo);
+                this.blueGraphicsGrp.alpha = 1;
+            }
+        });
+
+        this.tweens.add({
+            targets: this.blueGraphicsGrp,
+            alpha: 1,
+            duration: 400,
+            ease: 'Linear',
+        })
     }
 
     firstTouch() {
@@ -122,13 +173,21 @@ export class Game extends Scene {
 
         let toX = (this.bar.circle.x * this.bar.scaleX) + this.bar.x;
         let toY = (this.bar.circle.y * this.bar.scaleY) + this.bar.y;
-        this.tweens.add({ targets: tile, x: toX, duration: 500, ease: 'Linear', });
-        this.tweens.add({ targets: tile, scaleX: { from: tile.scaleX, to: tile.scaleX + 0.5 }, scaleY: { from: tile.scaleY, to: tile.scaleY + 0.5 }, duration: 500, ease: 'Linear' });
+        // this.tweens.add({ targets: tile, x: toX, duration: 500, ease: 'Linear', });
+        this.tweens.add({ targets: tile, scaleX: { from: tile.scaleX, to: tile.scaleX + 1.5 }, scaleY: { from: tile.scaleY, to: tile.scaleY + 1.5 }, duration: 500, ease: 'Linear' });
         this.tweens.add({
             targets: tile,
-            y: toY,
+            x: [tile.x, tile.x - 250, toX],
+            y: [tile.y, tile.y - 200, toY],
+            interpolation: 'bezier',
             duration: 500,
-            ease: 'Back.Out',
+            ease: "Linear",
+            delay: 100,
+            // this.tweens.add({
+            //     targets: tile,
+            //     y: toY,
+            //     duration: 500,
+            //     ease: 'Back.Out',
             onComplete: () => {
                 tile.destroy();
                 this.bar.increaseBar()
@@ -259,6 +318,14 @@ export class Game extends Scene {
         this.endCard.adjust();
         this.intro.adjust();
         this.bar.adjust();
+
+        if (this.whiteGraphics) this.whiteGraphics.destroy();
+        this.whiteGraphics = this.make.graphics().fillStyle(0xffffff, 1).fillRect(dimensions.leftOffset, dimensions.topOffset, dimensions.actualWidth, dimensions.actualHeight);
+        this.whiteGraphicsGrp.add(this.whiteGraphics);
+
+        if (this.blueGraphics) this.blueGraphics.destroy();
+        this.blueGraphics = this.make.graphics().fillStyle(0X00ffff, 1).fillRect(dimensions.leftOffset, dimensions.topOffset, dimensions.actualWidth, dimensions.actualHeight);
+        this.blueGraphicsGrp.add(this.blueGraphics);
     }
 
     offsetMouse() {

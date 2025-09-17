@@ -96,6 +96,9 @@ export class GamePlay extends Phaser.GameObjects.Container {
         this.bg = this.scene.add.sprite(0, 0, 'sheet', 'Level-BG').setOrigin(.5);
         this.add(this.bg);
 
+        this.sparkleGrp = this.scene.add.container();
+        this.add(this.sparkleGrp);
+
         this.base = this.scene.add.sprite(0, 170, 'sheet', 'Talon-Base').setOrigin(.5);
         this.add(this.base);
 
@@ -195,9 +198,12 @@ export class GamePlay extends Phaser.GameObjects.Container {
 
         this.superWag = new Char(this.scene, 0, 0)
         this.add(this.superWag);
-        this.superWag.x = -300;
-        this.superWag.y = -100;
-        this.superWag.visible = false;
+        this.superWag.setAngle(0);
+        this.superWag.setScale(-1, 1)
+        this.superWag.x = 0;
+        this.superWag.y = -450;
+        this.superWag.char.alpha = 0;
+        this.superWag.fx.alpha = 0;
 
         this.handSprite = this.scene.add.sprite(0, 0, "sheet", 'Hand');
         this.handSprite.setScale(.8);
@@ -226,7 +232,6 @@ export class GamePlay extends Phaser.GameObjects.Container {
                 this.boltCount++;
                 if (this.boltCount >= 3) {
                     this.scene.sound.play('positive3', { volume: 1 });
-                    this.showWin();
                 } else if (this.boltCount === 2) {
                     this.scene.sound.play('positive2', { volume: 1 });
                 } else if (this.boltCount === 1) {
@@ -284,7 +289,7 @@ export class GamePlay extends Phaser.GameObjects.Container {
 
         const dx = targetX - startX;
         const dy = targetY - startY;
-        const curveHeight = 150;
+        const curveHeight = 350;
 
         const cp1x = startX + dx * 0.3;
         const cp1y = startY + dy * 0.3 - curveHeight;
@@ -313,59 +318,214 @@ export class GamePlay extends Phaser.GameObjects.Container {
                 sprite.x = targetX;
                 sprite.y = targetY;
                 sprite.angle = 0;
-                // this.startHint();
+                this.startHint();
                 if (onComplete) onComplete();
             }
         });
+    }
+
+    addSparkle() {
+        let centerX = 0;
+        let centerY = 0;
+
+        let emitter = this.scene.add.particles(0, 0, 'sheet', {
+            frame: ['Particle-Dot'],
+            x: centerX,
+            y: centerY,
+            speed: { min: 100, max: 400 },
+            angle: { min: 0, max: 360 },
+            scale: { start: 0.5, end: 0 },
+            alpha: { start: 1, end: 0 },
+            lifespan: 5000,
+            quantity: 250,
+            on: false
+        });
+
+        emitter.explode(250, centerX, centerY);
+        this.sparkleGrp.add(emitter);
     }
 
     showWin() {
         this.gameOver = true;
         this.canClick = false;
 
+        this.scene.addWinGraphics();
         this.scene.time.addEvent({
-            delay: 900,
+            delay: 500,
             callback: () => {
-                this.superWag.visible = true;
-                this.superWag.setAngle(-30);
                 this.scene.bar.hide();
-                this.superWag.fx.play("fx");
-
-                const allCards = [...this.topCards, ...this.bottomCards, ...this.targetCards];
-                allCards.forEach((card, i) => {
+            }
+        })
+        this.scene.time.addEvent({
+            delay: 700,
+            callback: () => {
+                this.scene.tweens.add({
+                    targets: this.superWag.char,
+                    alpha: 1,
+                    duration: 200,
+                    ease: 'Linear',
+                })
+                this.superWag.circleFx.play("circleFx");
+                this.superWag.circleFx.visible = true;
+                this.superWag.circleFx.on("animationcomplete", () => {
                     this.scene.tweens.add({
-                        targets: card,
-                        x: card.x + Phaser.Math.Between(250, 500),
-                        y: card.y + Phaser.Math.Between(-200, 200),
-                        angle: Phaser.Math.Between(-90, 90),
+                        targets: this.superWag.circleFx,
                         alpha: 0,
-                        duration: Phaser.Math.Between(700, 1200),
-                        ease: "Cubic.Out",
-                        delay: i * 20
-                    });
-                });
+                        duration: 100,
+                        ease: 'Linear',
+                        onComplete: () => {
+                            this.superWag.circleFx.setVisible(false);
 
+                        }
+                    })
+                });
                 this.scene.tweens.add({
                     targets: this.superWag,
-                    x: 500,
-                    scale: { from: .5, to: this.superWag.scaleX },
-                    angle: 0,
-                    duration: 2500,
-                    ease: 'Cubic.Out',
+                    y: { from: this.superWag.y, to: this.superWag.y - 5 },
+                    duration: 175,
+                    ease: 'Linear',
+                    yoyo: true,
+                    repeat: 1,
                     onComplete: () => {
-                        this.superWag.visible = false;
-                    }
-                });
+                        this.scene.tweens.add({
+                            targets: this.superWag,
+                            x: -1200,
+                            duration: 1200,
+                            ease: 'Cubic.Out',
+                            onComplete: () => {
+                                this.superWag.visible = false;
+                                this.superWag.x = -700;
+                                this.superWag.y = -100;
+                                this.superWag.setScale(1, 1);
+                                this.superWag.setAngle(-30);
+                                this.scene.time.addEvent({
+                                    delay: 300,
+                                    callback: () => {
+                                        this.addSparkle();
+                                        this.scene.tweens.add({
+                                            targets: [this.bg, this.base],
+                                            alpha: 0,
+                                            duration: 300,
+                                            ease: 'Linear',
+                                        })
+                                    }
+                                });
+                                this.scene.time.addEvent({
+                                    delay: 1500,
+                                    callback: () => {
+                                        this.addFeedbacks();
+                                    }
+                                });
+                                const allCards = [...this.topCards, ...this.bottomCards, ...this.targetCards];
+                                allCards.forEach((card, i) => {
+                                    this.scene.tweens.add({
+                                        targets: card,
+                                        x: card.x + Phaser.Math.Between(250, 500),
+                                        y: card.y + Phaser.Math.Between(-200, 200),
+                                        angle: Phaser.Math.Between(-90, 90),
+                                        alpha: 0,
+                                        duration: Phaser.Math.Between(700, 1200),
+                                        ease: "Cubic.Out",
+                                        delay: 300 + i * 20
+                                    });
+                                });
+                                this.superWag.visible = true;
+                                this.scene.tweens.add({
+                                    targets: this.superWag,
+                                    x: 500,
+                                    // scale: { from: .5, to: this.superWag.scaleX },
+                                    angle: 0,
+                                    duration: 2500,
+                                    ease: 'Cubic.Out',
+                                    onComplete: () => {
+                                        this.superWag.visible = false;
+                                        this.scene.time.addEvent({
+                                            delay: 500,
+                                            callback: () => {
+                                                this.hide();
+                                                this.scene.endCard.show();
+                                            }
+                                        });
+                                    }
+                                });
+                                this.superWag.fx.setScale(-1, 1);
+                                this.superWag.fx.play("fx");
+                                this.superWag.fx.on("animationcomplete", () => {
+                                    this.scene.tweens.add({
+                                        targets: this.superWag.fx,
+                                        alpha: 0,
+                                        duration: 100,
+                                        ease: 'Linear',
+                                        onComplete: () => {
+                                            this.superWag.fx.setVisible(false);
 
-                this.scene.time.addEvent({
-                    delay: 1500,
-                    callback: () => {
-                        this.hide();
-                        this.scene.endCard.show();
+                                        }
+                                    })
+                                });
+                            }
+                        });
+                        this.superWag.fx.setScale(-1, .7);
+                        this.superWag.fx.play("fx");
+                        this.scene.tweens.add({
+                            targets: this.superWag.fx,
+                            alpha: 1,
+                            duration: 50,
+                            ease: 'Linear',
+                        })
                     }
                 });
             }
         });
+    }
+    createAnimation(path, prefix, animString, frameStart, frameEnd, repeat, hideOnComplete, frameRate) {
+        this.scene.anims.create({
+            key: animString,
+            frames: this.scene.anims.generateFrameNames(prefix, {
+                prefix: path,
+                start: frameStart,
+                end: frameEnd,
+            }),
+            frameRate: frameRate,
+            repeat: repeat,
+            hideOnComplete: hideOnComplete,
+        });
+    }
+
+    addFeedbacks() {
+        this.feedbackGrp = this.scene.add.container();
+        this.add(this.feedbackGrp);
+        this.feedbackGrp.y = -300
+
+        let text = this.scene.add.sprite(0, 0, "sheet", "Text_SUPER");
+        this.feedbackGrp.add(text);
+
+        let rectFx = this.scene.add.sprite(0, 0, "card", "super_text_vfx/01");
+        rectFx.setOrigin(.5);
+        rectFx.setScale(1);
+        this.feedbackGrp.add(rectFx);
+        this.createAnimation('super_text_vfx/0', "card", 'super_text_vfx1', 1, 8, 0, false, 15);
+        rectFx.anims.play("super_text_vfx1")
+
+        this.scene.tweens.add({
+            targets: text,
+            scale: { from: 2, to: text.scale },
+            duration: 350,
+            ease: 'Back.easeOut',
+        });
+
+        rectFx.on("animationcomplete", () => {
+            this.scene.tweens.add({
+                targets: rectFx,
+                alpha: 0,
+                duration: 100,
+                ease: 'Linear',
+                onComplete: () => {
+                    rectFx.setVisible(false);
+
+                }
+            })
+        });
+
     }
 
     startHint() {
@@ -421,5 +581,8 @@ export class GamePlay extends Phaser.GameObjects.Container {
         this.setScale(1)
         this.x = dimensions.gameWidth / 2;
         this.y = dimensions.gameHeight / 2 + 200;
+
+
+
     }
 }

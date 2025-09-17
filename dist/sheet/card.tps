@@ -88,9 +88,9 @@
         <key>maxTextureSize</key>
         <QSize>
             <key>width</key>
-            <int>1024</int>
+            <int>4096</int>
             <key>height</key>
-            <int>1024</int>
+            <int>4096</int>
         </QSize>
         <key>fixedTextureSize</key>
         <QSize>
@@ -206,6 +206,95 @@
                 <rect>19,28,37,57</rect>
                 <key>scale9Paddings</key>
                 <rect>19,28,37,57</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../cards/Prograss-Bar-BG.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>51,56,101,111</rect>
+                <key>scale9Paddings</key>
+                <rect>51,56,101,111</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../cards/Prograss-Bar-Fill_01.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>28,19,55,37</rect>
+                <key>scale9Paddings</key>
+                <rect>28,19,55,37</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../cards/Prograss-Bar-Fill_02.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>41,32,81,65</rect>
+                <key>scale9Paddings</key>
+                <rect>41,32,81,65</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../cards/Prograss-Bar-Fill_03.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>46,52,93,103</rect>
+                <key>scale9Paddings</key>
+                <rect>46,52,93,103</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../cards/circular_electric_vfx/01.png</key>
+            <key type="filename">../cards/circular_electric_vfx/02.png</key>
+            <key type="filename">../cards/circular_electric_vfx/03.png</key>
+            <key type="filename">../cards/circular_electric_vfx/04.png</key>
+            <key type="filename">../cards/circular_electric_vfx/05.png</key>
+            <key type="filename">../cards/circular_electric_vfx/06.png</key>
+            <key type="filename">../cards/circular_electric_vfx/07.png</key>
+            <key type="filename">../cards/super_text_vfx/01.png</key>
+            <key type="filename">../cards/super_text_vfx/02.png</key>
+            <key type="filename">../cards/super_text_vfx/03.png</key>
+            <key type="filename">../cards/super_text_vfx/04.png</key>
+            <key type="filename">../cards/super_text_vfx/05.png</key>
+            <key type="filename">../cards/super_text_vfx/06.png</key>
+            <key type="filename">../cards/super_text_vfx/07.png</key>
+            <key type="filename">../cards/super_text_vfx/08.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>120,120,240,240</rect>
+                <key>scale9Paddings</key>
+                <rect>120,120,240,240</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>

@@ -10,30 +10,46 @@ export class Char extends Phaser.GameObjects.Container {
     }
 
     init() {
+        this.circleFx = this.scene.add.sprite(0, 0, "card", "circular_electric_vfx/01");
+        this.circleFx.setOrigin(.5);
+        this.circleFx.setScale(2.5);
+        this.add(this.circleFx);
+        this.circleFx.visible = false;
+
+        this.createAnimation('circular_electric_vfx/0', "card", 'circleFx', 1, 7, 0, false, 10, true);
+
+        this.fx = this.scene.add.sprite(-250, 50, "sheet", "fx/01");
+        this.fx.setOrigin(.5)
+        this.fx.setScale(-1, 1);
+        this.add(this.fx);
+
+        this.createAnimation('fx/0', "sheet", 'fx', 1, 6, 0, false, 5);
 
         this.char = this.scene.add.sprite(0, 0, 'sheet', 'Super-wags').setOrigin(.5).setScale(.85);
         this.add(this.char);
 
-        this.fx = this.scene.add.sprite(-350, 50, "sheet", "fx/01");
-        this.fx.setOrigin(.5)
-        this.fx.setScale(1);
-        this.add(this.fx);
-
-        this.createAnimation('fx/0', "sheet", 'fx', 1, 6, 0, true, 5);
     }
 
-    createAnimation(path, prefix, animString, frameStart, frameEnd, repeat, hideOnComplete, frameRate) {
+    createAnimation(path, prefix, animString, frameStart, frameEnd, repeat, hideOnComplete, frameRate, reverse = false) {
+        let frames = this.scene.anims.generateFrameNames(prefix, {
+            prefix: path,
+            start: frameStart,
+            end: frameEnd,
+        });
+
+        if (reverse) {
+            frames = frames.reverse();
+        }
+
         this.scene.anims.create({
             key: animString,
-            frames: this.scene.anims.generateFrameNames(prefix, {
-                prefix: path,
-                start: frameStart,
-                end: frameEnd,
-            }),
+            frames: frames,
             frameRate: frameRate,
             repeat: repeat,
             hideOnComplete: hideOnComplete,
         });
     }
+
+
 
 }

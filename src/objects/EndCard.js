@@ -22,7 +22,10 @@ export class EndCard extends Phaser.GameObjects.Container {
         this.ray = this.scene.add.sprite(0, 170, 'sheet', 'VFX_God-Rays').setOrigin(.5).setScale(1);
         this.add(this.ray);
 
-        this.text = this.scene.add.sprite(0, 0, 'sheet', 'SUPER CHEST UNLOCKED').setOrigin(.5).setScale(.65);
+        this.ray1 = this.scene.add.sprite(0, 170, 'sheet', 'VFX_God-Rays').setOrigin(.5).setScale(1);
+        this.add(this.ray1);
+
+        this.text = this.scene.add.sprite(0, 0, 'sheet', 'SUPER CHEST UNLOCKED').setOrigin(.5).setScale(.7);
         this.add(this.text);
 
         this.chest = this.scene.add.sprite(0, 170, 'sheet', 'Super-Chest').setOrigin(.5).setScale(.65);
@@ -152,6 +155,7 @@ export class EndCard extends Phaser.GameObjects.Container {
         this.chest.alpha = 0;
         this.logo.alpha = 0;
         this.ray.alpha = 0;
+        this.ray1.alpha = 0;
         this.scene.sound.play('win', { volume: 1.5 })
 
         let delay = 0;
@@ -174,10 +178,10 @@ export class EndCard extends Phaser.GameObjects.Container {
         this.scene.tweens.add({ targets: this.chest, alpha: 1, x: { from: this.chest.x - 400, to: this.chest.x }, duration: 250, ease: "Back.easeOut", delay: delay, });
 
         delay += 250;
-        this.scene.tweens.add({ targets: this.ray, alpha: 1, scale: { from: 0, to: 1 }, duration: 250, ease: "Back.easeOut", delay: delay, });
+        this.scene.tweens.add({ targets: [this.ray, this.ray1], alpha: 1, scale: { from: 0, to: 1 }, duration: 250, ease: "Back.easeOut", delay: delay, });
 
         delay += 250;
-        this.scene.tweens.add({ targets: this.ray, angle: 360, duration: 2000, ease: "Linear", delay: delay, repeat: -1 });
+        this.scene.tweens.add({ targets: [this.ray, this.ray1], angle: 360, duration: 2000, ease: "Linear", delay: delay, repeat: -1 });
 
         setTimeout(() => {
             this.showCrackers();

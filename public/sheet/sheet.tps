@@ -4,7 +4,7 @@
         <key>fileFormatVersion</key>
         <int>4</int>
         <key>texturePackerVersion</key>
-        <string>5.5.0</string>
+        <string>5.4.0</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -190,9 +190,9 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>74,113,148,226</rect>
+                <rect>19,28,37,57</rect>
                 <key>scale9Paddings</key>
-                <rect>74,113,148,226</rect>
+                <rect>19,28,37,57</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -265,9 +265,9 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>16,20,33,41</rect>
+                <rect>15,19,30,37</rect>
                 <key>scale9Paddings</key>
-                <rect>16,20,33,41</rect>
+                <rect>15,19,30,37</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -280,9 +280,9 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>15,20,29,40</rect>
+                <rect>14,19,27,38</rect>
                 <key>scale9Paddings</key>
-                <rect>15,20,29,40</rect>
+                <rect>14,19,27,38</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -295,9 +295,9 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>14,20,29,40</rect>
+                <rect>13,19,27,38</rect>
                 <key>scale9Paddings</key>
-                <rect>14,20,29,40</rect>
+                <rect>13,19,27,38</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -310,9 +310,9 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>19,20,37,40</rect>
+                <rect>18,19,35,38</rect>
                 <key>scale9Paddings</key>
-                <rect>19,20,37,40</rect>
+                <rect>18,19,35,38</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -325,9 +325,9 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>16,20,32,40</rect>
+                <rect>15,19,29,37</rect>
                 <key>scale9Paddings</key>
-                <rect>16,20,32,40</rect>
+                <rect>15,19,29,37</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -403,66 +403,6 @@
                 <rect>14,14,27,27</rect>
                 <key>scale9Paddings</key>
                 <rect>14,14,27,27</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../assets/Prograss-Bar-BG.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>51,56,101,111</rect>
-                <key>scale9Paddings</key>
-                <rect>51,56,101,111</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../assets/Prograss-Bar-Fill_01.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>28,19,55,37</rect>
-                <key>scale9Paddings</key>
-                <rect>28,19,55,37</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../assets/Prograss-Bar-Fill_02.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>41,32,81,65</rect>
-                <key>scale9Paddings</key>
-                <rect>41,32,81,65</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../assets/Prograss-Bar-Fill_03.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>46,52,93,103</rect>
-                <key>scale9Paddings</key>
-                <rect>46,52,93,103</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -550,9 +490,9 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>16,20,31,40</rect>
+                <rect>15,19,29,38</rect>
                 <key>scale9Paddings</key>
-                <rect>16,20,31,40</rect>
+                <rect>15,19,29,38</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -602,8 +542,11 @@
                 <false/>
             </struct>
             <key type="filename">../assets/Wags1.png</key>
+            <key type="filename">../assets/Wags1_close.png</key>
             <key type="filename">../assets/Wags2.png</key>
+            <key type="filename">../assets/Wags2_close.png</key>
             <key type="filename">../assets/Wags3.png</key>
+            <key type="filename">../assets/Wags3_close.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -664,10 +607,80 @@
                 <false/>
             </struct>
             <key type="filename">../assets/fx/01.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>47,49,95,98</rect>
+                <key>scale9Paddings</key>
+                <rect>47,49,95,98</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../assets/fx/02.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>105,42,209,85</rect>
+                <key>scale9Paddings</key>
+                <rect>105,42,209,85</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../assets/fx/03.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>148,31,297,61</rect>
+                <key>scale9Paddings</key>
+                <rect>148,31,297,61</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../assets/fx/04.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>159,27,318,55</rect>
+                <key>scale9Paddings</key>
+                <rect>159,27,318,55</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../assets/fx/05.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>101,16,201,31</rect>
+                <key>scale9Paddings</key>
+                <rect>101,16,201,31</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../assets/fx/06.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
@@ -677,9 +690,9 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>240,240,480,480</rect>
+                <rect>19,8,38,15</rect>
                 <key>scale9Paddings</key>
-                <rect>240,240,480,480</rect>
+                <rect>19,8,38,15</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -785,6 +798,21 @@
                 <rect>50,19,99,38</rect>
                 <key>scale9Paddings</key>
                 <rect>50,19,99,38</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../assets/intro/Zap-blur.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>70,21,139,43</rect>
+                <key>scale9Paddings</key>
+                <rect>70,21,139,43</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
