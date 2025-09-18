@@ -238,7 +238,7 @@ export class GamePlay extends Phaser.GameObjects.Container {
                     this.scene.sound.play('positive1', { volume: 1 });
                 }
             }
-            const target = this.targetCards[this.targetCards.length - 1];
+            const target = this.targetCards[0];
             this.moveCardWithArc(sprite, target.x, target.y);
 
             this.targetCards.push(sprite);
@@ -258,6 +258,7 @@ export class GamePlay extends Phaser.GameObjects.Container {
             }
         } else {
             sprite.shakeSprite();
+
         }
     }
 
@@ -332,12 +333,11 @@ export class GamePlay extends Phaser.GameObjects.Container {
             frame: ['Particle-Dot'],
             x: centerX,
             y: centerY,
-            speed: { min: 100, max: 400 },
+            speed: { min: 500, max: 1000 },
             angle: { min: 0, max: 360 },
-            scale: { start: 0.5, end: 0 },
+            scale: { start: 0.6, end: 0 },
             alpha: { start: 1, end: 0 },
-            lifespan: 5000,
-            quantity: 250,
+            lifespan: { min: 800, max: 1600 },
             on: false
         });
 
@@ -387,19 +387,25 @@ export class GamePlay extends Phaser.GameObjects.Container {
                     yoyo: true,
                     repeat: 1,
                     onComplete: () => {
+                        let toX = -700,
+                            duration = 700;
+                        if (dimensions.isLandscape) toX = this.superWag.x - 1200, duration = 1200;
+
                         this.scene.tweens.add({
                             targets: this.superWag,
-                            x: -1200,
-                            duration: 1200,
+                            x: toX,
+                            duration: duration,
                             ease: 'Cubic.Out',
                             onComplete: () => {
                                 this.superWag.visible = false;
-                                this.superWag.x = -700;
+                                this.superWag.x = -500;
                                 this.superWag.y = -100;
+                                if (dimensions.isLandscape) this.superWag.x = -700;
+
                                 this.superWag.setScale(1, 1);
-                                this.superWag.setAngle(-30);
+                                // this.superWag.setAngle(-30);
                                 this.scene.time.addEvent({
-                                    delay: 300,
+                                    delay: 200,
                                     callback: () => {
                                         this.addSparkle();
                                         this.scene.tweens.add({
@@ -411,7 +417,7 @@ export class GamePlay extends Phaser.GameObjects.Container {
                                     }
                                 });
                                 this.scene.time.addEvent({
-                                    delay: 1500,
+                                    delay: 800,
                                     callback: () => {
                                         this.addFeedbacks();
                                     }
@@ -426,7 +432,7 @@ export class GamePlay extends Phaser.GameObjects.Container {
                                         alpha: 0,
                                         duration: Phaser.Math.Between(700, 1200),
                                         ease: "Cubic.Out",
-                                        delay: 300 + i * 20
+                                        delay: 200 + i * 20
                                     });
                                 });
                                 this.superWag.visible = true;
@@ -434,13 +440,13 @@ export class GamePlay extends Phaser.GameObjects.Container {
                                     targets: this.superWag,
                                     x: 500,
                                     // scale: { from: .5, to: this.superWag.scaleX },
-                                    angle: 0,
-                                    duration: 2500,
+                                    // angle: 0,
+                                    duration: 1750,
                                     ease: 'Cubic.Out',
                                     onComplete: () => {
                                         this.superWag.visible = false;
                                         this.scene.time.addEvent({
-                                            delay: 500,
+                                            delay: 700,
                                             callback: () => {
                                                 this.hide();
                                                 this.scene.endCard.show();
@@ -521,7 +527,6 @@ export class GamePlay extends Phaser.GameObjects.Container {
                 ease: 'Linear',
                 onComplete: () => {
                     rectFx.setVisible(false);
-
                 }
             })
         });
@@ -538,7 +543,7 @@ export class GamePlay extends Phaser.GameObjects.Container {
         })
     }
 
-    showHint() {
+    showHint(isLoop = false) {
         if (this.gameOver) return;
 
         const expected = this.cardPlayOrder[this.currentIndex + 1];
@@ -565,6 +570,7 @@ export class GamePlay extends Phaser.GameObjects.Container {
                 repeat: 1,
                 onComplete: () => {
                     this.stopHint();
+                    if (isLoop) this.startHint();
                 }
             });
         }
@@ -575,6 +581,8 @@ export class GamePlay extends Phaser.GameObjects.Container {
         this.handSprite.setScale(1);
 
         if (this.handTween) this.handTween.stop();
+        if (this.hintDelay) this.scene.time.removeEvent(this.hintDelay), this.hintDelay = null;
+
     }
 
     adjust() {

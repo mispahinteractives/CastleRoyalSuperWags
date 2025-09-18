@@ -16,7 +16,7 @@ export class EndCard extends Phaser.GameObjects.Container {
     init() {
         this.crackerIndex = 0;
 
-        this.logo = this.scene.add.sprite(0, -200, 'sheet', 'Solitaire-CR_Logo').setOrigin(.5).setScale(1.3);
+        this.logo = this.scene.add.sprite(0, -220, 'sheet', 'Solitaire-CR_Logo').setOrigin(.5).setScale(1.3);
         this.add(this.logo);
 
         this.ray = this.scene.add.sprite(0, 170, 'sheet', 'VFX_God-Rays').setOrigin(.5).setScale(1);
@@ -25,7 +25,7 @@ export class EndCard extends Phaser.GameObjects.Container {
         this.ray1 = this.scene.add.sprite(0, 170, 'sheet', 'VFX_God-Rays').setOrigin(.5).setScale(1);
         this.add(this.ray1);
 
-        this.text = this.scene.add.sprite(0, 0, 'sheet', 'SUPER CHEST UNLOCKED').setOrigin(.5).setScale(.7);
+        this.text = this.scene.add.sprite(0, -20, 'sheet', 'SUPER CHEST UNLOCKED').setOrigin(.5).setScale(.7);
         this.add(this.text);
 
         this.chest = this.scene.add.sprite(0, 170, 'sheet', 'Super-Chest').setOrigin(.5).setScale(.65);

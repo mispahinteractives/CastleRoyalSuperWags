@@ -19,9 +19,11 @@ export class Char extends Phaser.GameObjects.Container {
         this.createAnimation('circular_electric_vfx/0', "card", 'circleFx', 1, 7, 0, false, 10, true);
 
         this.fx = this.scene.add.sprite(-250, 50, "sheet", "fx/01");
-        this.fx.setOrigin(.5)
+        this.fx.setOrigin(0, .5)
         this.fx.setScale(-1, 1);
         this.add(this.fx);
+
+        this.fx.x += this.fx.width * 1.05;
 
         this.createAnimation('fx/0', "sheet", 'fx', 1, 6, 0, false, 5);
 

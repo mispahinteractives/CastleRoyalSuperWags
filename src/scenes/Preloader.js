@@ -318,7 +318,7 @@ export class Preloader extends Scene {
 
                 {
                     "filename": "Back_Card_",
-                    "frame": { "x": 1900, "y": 1129, "w": 74, "h": 113 },
+                    "frame": { "x": 1358, "y": 1007, "w": 74, "h": 113 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 74, "h": 113 },
@@ -326,7 +326,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "Blue_Circle",
-                    "frame": { "x": 893, "y": 128, "w": 360, "h": 360 },
+                    "frame": { "x": 753, "y": 484, "w": 360, "h": 360 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 360 },
@@ -334,7 +334,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "bolt back circle_",
-                    "frame": { "x": 1801, "y": 1129, "w": 96, "h": 96 },
+                    "frame": { "x": 1914, "y": 302, "w": 96, "h": 96 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
@@ -342,7 +342,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "Bolt Icon",
-                    "frame": { "x": 392, "y": 878, "w": 42, "h": 62 },
+                    "frame": { "x": 797, "y": 418, "w": 42, "h": 62 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 42, "h": 62 },
@@ -350,7 +350,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "Cape",
-                    "frame": { "x": 1677, "y": 428, "w": 240, "h": 197 },
+                    "frame": { "x": 881, "y": 1145, "w": 240, "h": 197 },
                     "rotated": false,
                     "trimmed": true,
                     "spriteSourceSize": { "x": 0, "y": 147, "w": 240, "h": 197 },
@@ -358,7 +358,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "Card_Outer-glow",
-                    "frame": { "x": 1793, "y": 1228, "w": 80, "h": 111 },
+                    "frame": { "x": 1706, "y": 1007, "w": 80, "h": 111 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 111 },
@@ -366,7 +366,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "Collect-C",
-                    "frame": { "x": 1925, "y": 339, "w": 60, "h": 75 },
+                    "frame": { "x": 1956, "y": 81, "w": 60, "h": 75 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 60, "h": 75 },
@@ -374,7 +374,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "Collect-E",
-                    "frame": { "x": 1938, "y": 1245, "w": 55, "h": 76 },
+                    "frame": { "x": 1827, "y": 490, "w": 55, "h": 76 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 55, "h": 76 },
@@ -382,7 +382,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "Collect-L",
-                    "frame": { "x": 1935, "y": 827, "w": 53, "h": 76 },
+                    "frame": { "x": 1496, "y": 1062, "w": 53, "h": 76 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 53, "h": 76 },
@@ -390,7 +390,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "Collect-O",
-                    "frame": { "x": 1852, "y": 339, "w": 70, "h": 76 },
+                    "frame": { "x": 1956, "y": 2, "w": 70, "h": 76 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 70, "h": 76 },
@@ -398,7 +398,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "Collect-T",
-                    "frame": { "x": 1876, "y": 1245, "w": 59, "h": 75 },
+                    "frame": { "x": 1552, "y": 1062, "w": 59, "h": 75 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 59, "h": 75 },
@@ -406,7 +406,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "Download-Now",
-                    "frame": { "x": 1174, "y": 1213, "w": 308, "h": 134 },
+                    "frame": { "x": 978, "y": 342, "w": 308, "h": 134 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 308, "h": 134 },
@@ -414,7 +414,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "electric effect",
-                    "frame": { "x": 1823, "y": 827, "w": 109, "h": 140 },
+                    "frame": { "x": 1914, "y": 159, "w": 109, "h": 140 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 109, "h": 140 },
@@ -422,7 +422,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "favicon",
-                    "frame": { "x": 1485, "y": 1207, "w": 154, "h": 154 },
+                    "frame": { "x": 1116, "y": 554, "w": 154, "h": 154 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 154, "h": 154 },
@@ -430,7 +430,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "fx/01",
-                    "frame": { "x": 1774, "y": 628, "w": 189, "h": 196 },
+                    "frame": { "x": 1124, "y": 1144, "w": 189, "h": 196 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 189, "h": 196 },
@@ -438,7 +438,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "fx/02",
-                    "frame": { "x": 1256, "y": 428, "w": 418, "h": 169 },
+                    "frame": { "x": 1316, "y": 1144, "w": 418, "h": 169 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 418, "h": 169 },
@@ -446,7 +446,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "fx/03",
-                    "frame": { "x": 1256, "y": 303, "w": 593, "h": 122 },
+                    "frame": { "x": 1289, "y": 365, "w": 593, "h": 122 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 593, "h": 122 },
@@ -454,7 +454,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "fx/04",
-                    "frame": { "x": 1224, "y": 2, "w": 636, "h": 109 },
+                    "frame": { "x": 1317, "y": 2, "w": 636, "h": 109 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 636, "h": 109 },
@@ -462,7 +462,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "fx/05",
-                    "frame": { "x": 1474, "y": 980, "w": 402, "h": 63 },
+                    "frame": { "x": 392, "y": 418, "w": 402, "h": 63 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 402, "h": 63 },
@@ -470,7 +470,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "fx/06",
-                    "frame": { "x": 460, "y": 425, "w": 76, "h": 31 },
+                    "frame": { "x": 460, "y": 900, "w": 76, "h": 31 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 76, "h": 31 },
@@ -478,7 +478,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "Hand",
-                    "frame": { "x": 1863, "y": 2, "w": 134, "h": 165 },
+                    "frame": { "x": 1885, "y": 401, "w": 134, "h": 165 },
                     "rotated": false,
                     "trimmed": true,
                     "spriteSourceSize": { "x": 9, "y": 7, "w": 134, "h": 165 },
@@ -486,7 +486,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "info",
-                    "frame": { "x": 978, "y": 491, "w": 240, "h": 240 },
+                    "frame": { "x": 1737, "y": 1121, "w": 240, "h": 240 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 240 },
@@ -494,7 +494,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "intro/_zap_",
-                    "frame": { "x": 1221, "y": 491, "w": 22, "h": 22 },
+                    "frame": { "x": 539, "y": 900, "w": 22, "h": 22 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 22, "h": 22 },
@@ -502,7 +502,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "intro/Text_and",
-                    "frame": { "x": 1642, "y": 1214, "w": 148, "h": 74 },
+                    "frame": { "x": 1116, "y": 793, "w": 148, "h": 74 },
                     "rotated": false,
                     "trimmed": true,
                     "spriteSourceSize": { "x": 1, "y": 1, "w": 148, "h": 74 },
@@ -510,7 +510,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "intro/Text_level!",
-                    "frame": { "x": 1745, "y": 1046, "w": 216, "h": 80 },
+                    "frame": { "x": 881, "y": 847, "w": 216, "h": 80 },
                     "rotated": false,
                     "trimmed": true,
                     "spriteSourceSize": { "x": 0, "y": 1, "w": 216, "h": 80 },
@@ -518,7 +518,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "intro/Text_the",
-                    "frame": { "x": 1852, "y": 257, "w": 143, "h": 79 },
+                    "frame": { "x": 1100, "y": 870, "w": 143, "h": 79 },
                     "rotated": false,
                     "trimmed": true,
                     "spriteSourceSize": { "x": 0, "y": 1, "w": 143, "h": 79 },
@@ -526,7 +526,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "intro/Text_wags",
-                    "frame": { "x": 978, "y": 829, "w": 197, "h": 75 },
+                    "frame": { "x": 1827, "y": 656, "w": 197, "h": 75 },
                     "rotated": false,
                     "trimmed": true,
                     "spriteSourceSize": { "x": 1, "y": 1, "w": 197, "h": 75 },
@@ -534,7 +534,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "intro/Text_Will",
-                    "frame": { "x": 1474, "y": 1132, "w": 167, "h": 72 },
+                    "frame": { "x": 1116, "y": 479, "w": 167, "h": 72 },
                     "rotated": false,
                     "trimmed": true,
                     "spriteSourceSize": { "x": 1, "y": 2, "w": 167, "h": 72 },
@@ -542,7 +542,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "intro/Text_ZAP_",
-                    "frame": { "x": 1644, "y": 1132, "w": 154, "h": 79 },
+                    "frame": { "x": 1116, "y": 711, "w": 154, "h": 79 },
                     "rotated": false,
                     "trimmed": true,
                     "spriteSourceSize": { "x": 1, "y": 1, "w": 154, "h": 79 },
@@ -550,7 +550,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "intro/Zap-blur",
-                    "frame": { "x": 1474, "y": 1046, "w": 268, "h": 83 },
+                    "frame": { "x": 1435, "y": 976, "w": 268, "h": 83 },
                     "rotated": false,
                     "trimmed": true,
                     "spriteSourceSize": { "x": 5, "y": 1, "w": 268, "h": 83 },
@@ -558,7 +558,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "Level-BG",
-                    "frame": { "x": 2, "y": 462, "w": 387, "h": 485 },
+                    "frame": { "x": 2, "y": 2, "w": 387, "h": 485 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 387, "h": 485 },
@@ -566,7 +566,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "Mask",
-                    "frame": { "x": 1797, "y": 170, "w": 197, "h": 84 },
+                    "frame": { "x": 1827, "y": 569, "w": 197, "h": 84 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 197, "h": 84 },
@@ -574,7 +574,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "Particle-Dot",
-                    "frame": { "x": 1797, "y": 114, "w": 53, "h": 53 },
+                    "frame": { "x": 842, "y": 418, "w": 53, "h": 53 },
                     "rotated": false,
                     "trimmed": true,
                     "spriteSourceSize": { "x": 1, "y": 1, "w": 53, "h": 53 },
@@ -582,7 +582,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "Solitaire-CR_Logo",
-                    "frame": { "x": 1560, "y": 843, "w": 260, "h": 134 },
+                    "frame": { "x": 1095, "y": 1007, "w": 260, "h": 134 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 134 },
@@ -590,15 +590,15 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "SUPER CHEST UNLOCKED",
-                    "frame": { "x": 460, "y": 2, "w": 761, "h": 123 },
+                    "frame": { "x": 1317, "y": 114, "w": 594, "h": 248 },
                     "rotated": false,
                     "trimmed": false,
-                    "spriteSourceSize": { "x": 0, "y": 0, "w": 761, "h": 123 },
-                    "sourceSize": { "w": 761, "h": 123 }
+                    "spriteSourceSize": { "x": 0, "y": 0, "w": 594, "h": 248 },
+                    "sourceSize": { "w": 594, "h": 248 }
                 },
                 {
                     "filename": "Super-Chest",
-                    "frame": { "x": 1174, "y": 940, "w": 297, "h": 270 },
+                    "frame": { "x": 1706, "y": 734, "w": 297, "h": 270 },
                     "rotated": false,
                     "trimmed": true,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 297, "h": 270 },
@@ -606,7 +606,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "Super-wags",
-                    "frame": { "x": 460, "y": 128, "w": 430, "h": 294 },
+                    "frame": { "x": 1273, "y": 679, "w": 430, "h": 294 },
                     "rotated": false,
                     "trimmed": true,
                     "spriteSourceSize": { "x": 6, "y": 1, "w": 430, "h": 294 },
@@ -614,7 +614,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "Talon-Base",
-                    "frame": { "x": 978, "y": 734, "w": 238, "h": 92 },
+                    "frame": { "x": 1789, "y": 1007, "w": 238, "h": 92 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 238, "h": 92 },
@@ -622,7 +622,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "Text_3",
-                    "frame": { "x": 1935, "y": 906, "w": 58, "h": 76 },
+                    "frame": { "x": 1435, "y": 1062, "w": 58, "h": 76 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 58, "h": 76 },
@@ -630,7 +630,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "Text_SUPER",
-                    "frame": { "x": 1256, "y": 114, "w": 538, "h": 186 },
+                    "frame": { "x": 1286, "y": 490, "w": 538, "h": 186 },
                     "rotated": false,
                     "trimmed": true,
                     "spriteSourceSize": { "x": 2, "y": 4, "w": 538, "h": 186 },
@@ -638,7 +638,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "VFX_God-Rays",
-                    "frame": { "x": 2, "y": 2, "w": 455, "h": 457 },
+                    "frame": { "x": 2, "y": 490, "w": 455, "h": 457 },
                     "rotated": false,
                     "trimmed": true,
                     "spriteSourceSize": { "x": 18, "y": 15, "w": 455, "h": 457 },
@@ -646,7 +646,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "VFX_Ring",
-                    "frame": { "x": 1221, "y": 600, "w": 336, "h": 337 },
+                    "frame": { "x": 978, "y": 2, "w": 336, "h": 337 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 336, "h": 337 },
@@ -670,7 +670,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "Wags2",
-                    "frame": { "x": 392, "y": 462, "w": 290, "h": 413 },
+                    "frame": { "x": 392, "y": 2, "w": 290, "h": 413 },
                     "rotated": false,
                     "trimmed": true,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 290, "h": 413 },
@@ -678,7 +678,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "Wags2_close",
-                    "frame": { "x": 685, "y": 491, "w": 290, "h": 413 },
+                    "frame": { "x": 685, "y": 2, "w": 290, "h": 413 },
                     "rotated": false,
                     "trimmed": true,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 290, "h": 413 },
@@ -686,7 +686,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "Wags3",
-                    "frame": { "x": 588, "y": 907, "w": 290, "h": 413 },
+                    "frame": { "x": 460, "y": 484, "w": 290, "h": 413 },
                     "rotated": false,
                     "trimmed": true,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 290, "h": 413 },
@@ -694,7 +694,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "Wags3_close",
-                    "frame": { "x": 881, "y": 907, "w": 290, "h": 413 },
+                    "frame": { "x": 588, "y": 900, "w": 290, "h": 413 },
                     "rotated": false,
                     "trimmed": true,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 290, "h": 413 },
@@ -702,7 +702,7 @@ export class Preloader extends Scene {
                 },
                 {
                     "filename": "wave_1",
-                    "frame": { "x": 1560, "y": 628, "w": 211, "h": 212 },
+                    "frame": { "x": 881, "y": 930, "w": 211, "h": 212 },
                     "rotated": false,
                     "trimmed": false,
                     "spriteSourceSize": { "x": 0, "y": 0, "w": 211, "h": 212 },
@@ -714,11 +714,12 @@ export class Preloader extends Scene {
                 "version": "1.0",
                 "image": "sheet.png",
                 "format": "RGBA8888",
-                "size": { "w": 1999, "h": 1365 },
+                "size": { "w": 2029, "h": 1365 },
                 "scale": "1",
-                "smartupdate": "$TexturePacker:SmartUpdate:58af54aee12dc761c1f249524cdd7cc3:186127ad27c4d8c17ab1c2a3c0b10b4a:9c44ecd7e9a522007eaff2949095bc1d$"
+                "smartupdate": "$TexturePacker:SmartUpdate:fc0735d4f91fbca1fed910d7886e53bb:520833453592fbb8cc90a5e95c8c1d79:9c44ecd7e9a522007eaff2949095bc1d$"
             }
         }
+
 
 
 

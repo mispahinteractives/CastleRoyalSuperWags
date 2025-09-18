@@ -32,7 +32,7 @@ export class Card extends Phaser.GameObjects.Container {
             onComplete: () => {
                 this.setAngle(prevAngle);
                 this.parentContainer.canClick = true;
-                this.parentContainer.showHint();
+                this.parentContainer.showHint(true);
             }
         });
     }
