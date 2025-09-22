@@ -130,16 +130,7 @@ export class Game extends Scene {
         console.log('First touch detected!');
         this.bgm = this.sound.add('bgm', {
             loop: true,
-            volume: 1
-        });
-        this.bgm.play();
-    }
-
-    playFirstSound() {
-        console.log('First touch detected!');
-        this.bgm = this.sound.add('bgm', {
-            loop: true,
-            volume: 1
+            volume: .8
         });
         this.bgm.play();
     }

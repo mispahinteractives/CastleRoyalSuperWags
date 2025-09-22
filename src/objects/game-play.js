@@ -570,7 +570,7 @@ export class GamePlay extends Phaser.GameObjects.Container {
                 repeat: 1,
                 onComplete: () => {
                     this.stopHint();
-                    if (isLoop) this.startHint();
+                    this.startHint();
                 }
             });
         }
